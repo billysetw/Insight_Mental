@@ -3,16 +3,19 @@
 <head>
    <meta charset="utf-8">
    <title>FAQ</title>
-   <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-   <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+   <!-- boostrap --> 
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-   <!-- MDB icon -->
+   <!-- Boostrap Modal -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+   
+   <!-- icon -->
+   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
    <link rel="icon" href="../assets/img/logo-admin.png" type="image/x-icon" />
-   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+   <!-- CSS -->
+   <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
 </head>
 <body>
    <!-- Main Content -->
@@ -30,12 +33,14 @@
       <section class="section">
       <div class="row">
         <div class="col-lg-12">
-          <div class="card">
+        <div class="card">
             <div class="card-body">
-               <h5 class="card-title">Frequently Asked Questions</h5>
-               <button type="button" class="btn-crud" data-toggle="modal" data-target="#add">
-                  <i class="fa fa-plus-circle"></i><font>Tambah QnA</font>
-              </button>
+            <h5 class="card-title"><b>FAQ</b> Insight Mental</h5>
+
+               <!-- PopUp -->
+               <button type="button" class="btn-crud btn-primary" data-bs-toggle="modal" data-bs-target="#add">
+                  <i class="fa fa-plus-circle"></i><font>Tambah FAQ</font>
+               </button>
 
               <table class="table datatable">
                 <thead>
@@ -43,7 +48,7 @@
                     <th scope="col">No</th>
                     <th scope="col">Question</th>
                     <th scope="col">Answer</th>
-                    <th scope="col" colspan="2">Aksi</th>
+                    <th scope="col">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -51,8 +56,10 @@
                     <td scope="row">1</th>
                     <td>BrandonJacob</td>
                     <td>Brandon Jacob</td>
-                    <td><a href="#">Edit</a></td>
-                    <td><a href="#">Hapus</a></td>
+                    <td>
+                        <a href="" class="edt"><i class="fa fa-pencil-square-o"></i></a>
+                        <a href="" class="del" onclick="return confirm('Anda yakin ingin Hapus?')"><i class="fa fa-trash-o"></i></a>
+                     </td>
                   </tr>
                 </tbody>
               </table>
@@ -60,12 +67,30 @@
           </div>
         </div>
       </div>
+      <!-- Add -->
+      <div class="modal fade" id="add" aria-labelledby="addFaq">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h1 class="modal-title fs-5" id="addFaq">TAMBAH FAQ</h1>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                     <form action="" method="POST" class="form">
+                        <label>Question <span style="color: red;">*</span></label>
+                        <input type="text" id="question" name="question" placeholder="Silahkan masukkan question..." required>
+
+                        <label>Answer <span style="color: red;">*</span></label>
+                        <input type="text" id="answer" name="answer" placeholder="Silahkan masukkan answer..." required>
+                     </form>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-primary" name="submit">Add Data</button>
+                  </div>
+               </div>
+            </div>
+         </div>
     </section>
-
-    <!-- Add -->
-    <!-- Edit -->
-    <!-- Delete -->
-
    </div>
    <!-- Navbar Content -->
    <nav class="main-menu">

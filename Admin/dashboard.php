@@ -3,15 +3,25 @@
 <head>
    <meta charset="utf-8">
    <title>Dashboard</title>
+
+   <!-- bootstrap -->
    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+   <!-- jquery -->
    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+   <!-- js chart -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+   <!-- bootstrap icon & font awasome -->
    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
    <!-- MDB icon -->
    <link rel="icon" href="../assets/img/logo-admin.png" type="image/x-icon" />
+
+   <!-- css -->
    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>
 <body>
@@ -88,7 +98,44 @@
       <!-- Chart -->
       <div class="cards">
          <h5 class="card-header">Chart</h5>
+         <canvas id="myChart" aria-label="chart" height="200" width="580"></canvas>
       </div>
+      <script>
+         var xValues = ["D3 Digital Technology", "D3 Teknik Telekomunikasi","S1 Teknik Telekomunikasi","S1 Teknik Biomedis", "S1 Teknik Informatika", "S1 Software Engineering", "S1 Sistem Informasi", "S1 Sains Data", "S1 Teknik Industri", "S1 Desain Komunikasi Visual", "S1 Digital Logistics", "S1 Bisnis Digital", "S1 Elektro"];
+         var yValues = [55, 49, 44, 24, 15, 55, 49, 44, 24, 15, 55, 49, 44];
+         var barColors = [
+            "#FFF2CC",
+            "#FFD966",
+            "#F4B183",
+            "#DFA67B",
+            "#DDFFBB",
+            "#F7C8E0",
+            "#DFFFD8",
+            "#B4E4FF",
+            "#95BDFF",
+            "#6096B4",
+            "#93BFCF",
+            "#BDCDD6",
+            "#EEE9DA",
+         ];
+
+         new Chart("myChart", {
+         type: "doughnut",
+         data: {
+            labels: xValues,
+            datasets: [{
+               backgroundColor: barColors,
+               data: yValues
+            }]
+         },
+         options: {
+            title: {
+               display: true,
+               text: "Pengguna Aplikasi Insight Mental sesuai Program Studi"
+            }
+         }
+         });
+      </script>
    </div>
    <!-- Navbar Content -->
    <nav class="main-menu">

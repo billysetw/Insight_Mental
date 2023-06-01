@@ -31,7 +31,7 @@
            </ol>
          </nav>
        </div>
-        <section class="section">
+      <section class="section">
       <div class="row">
         <div class="col-lg-12">
           <div class="card">
@@ -75,60 +75,29 @@
         </div>
       </div>
       <!-- Add -->
-      <div class="modal fade" id="add" aria-labelledby="addUser">
+      <div class="modal fade" id="add" aria-labelledby="addInfo">
             <div class="modal-dialog">
                <div class="modal-content">
                   <div class="modal-header">
-                     <h1 class="modal-title fs-5" id="addUser">TAMBAH USERS</h1>
+                     <h1 class="modal-title fs-5" id="addInfo">TAMBAH INFORMATION</h1>
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                      <form action="" method="POST" class="form">
-                        <label>Username <span style="color: red;">*</span></label>
-                        <input type="text" id="username" name="username" placeholder="Silahkan masukkan username..." required>
+                        <label>Title <span style="color: red;">*</span></label>
+                        <input type="text" id="title" name="title" placeholder="Silahkan masukkan title..." required>
 
-                        <label>Password <span style="color: red;">*</span></label>
-                        <input type="text" id="password" name="password" placeholder="Silahkan masukkan password..." required>
+                        <label>Web Url <span style="color: red;">*</span></label>
+                        <input type="text" id="urlWeb" name="urlWeb" placeholder="Silahkan masukkan website url..." required>
 
-                        <label>Nama <span style="color: red;">*</span></label>
-                        <input type="text" id="nama" name="nama" placeholder="Silahkan masukkan nama..." required>
+                        <label>Posted By <span style="color: red;">*</span></label>
+                        <input type="text" id="postedBy" name="postedBy" placeholder="Silahkan masukkan pembuat..." required>
 
-                        <label>Program Studi <span style="color: red;">*</span></label>
-                        <select id="prodi" name="prodi" required>
-                           <option value="">Silahkan Pilih</option>
-                           <option value="S1 Psikolog">S1 Psikolog</option>
-                           <option value="D3 Digital Technology">D3 Digital Technology</option>
-                           <option value="D3 Teknik Telekomunikasi">D3 Teknik Telekomunikasi</option>
-                           <option value="S1 Teknik Telekomunikasi">S1 Teknik Telekomunikasi</option>
-                           <option value="S1 Teknik Biomedis">S1 Teknik Biomedis</option>
-                           <option value="S1 Teknik Informatika">S1 Teknik Informatika</option>
-                           <option value="S1 Software Engineering">S1 Software Engineering</option>
-                           <option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
-                           <option value="S1 Sains Data">S1 Sains Data</option>
-                           <option value="S1 Teknik Industri">S1 Teknik Industri</option>
-                           <option value="S1 Desain Komunikasi Visual">S1 Desain Komunikasi Visual</option>
-                           <option value="S1 Digital Logistics">S1 Digital Logistics</option>
-                           <option value="S1 Bisnis Digital">S1 Bisnis Digital</option>
-                           <option value="S1 Elektro">S1 Elektro</option>
-                        </select>
+                        <label>Topic <span style="color: red;">*</span></label>
+                        <input type="text" id="topic" name="topic" placeholder="Diubah oleh..." required>
 
-                        <label>Jenis Kelamin <span style="color: red;">*</span></label>
-                        <select id="gender" name="gender" required>
-                           <option value="">Silahkan Pilih</option>
-                           <option value="M">M</option>
-                           <option value="F">F</option>
-                        </select>
-
-                        <label>Type <span style="color: red;">*</span></label>
-                        <select id="type" name="type" required>
-                           <option value="">Silahkan Pilih</option>
-                           <option value="Mahasiswa">Mahasiswa</option>
-                           <option value="Psikolog">Psikolog</option>
-                           <option value="Admin">Admin</option>
-                        </select>
-
-                        <label>Kampus <span style="color: red;">*</span></label>
-                        <input type="text" id="kampus" name="kampus" placeholder="Silahkan masukkan kampus..." required>
+                        <label>Background Image <span style="color: red;">*</span></label>
+                        <input type="file" id="bgImg" name="bgImg"  required>
                      </form>
                   </div>
                   <div class="modal-footer">
