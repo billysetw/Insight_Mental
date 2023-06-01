@@ -21,7 +21,7 @@
 
 /*Button*/
 
-/*.btn{
+.btn{
   background-color: #395B64;  
 }
 
@@ -33,7 +33,7 @@
   color: white;
   font-family: 'Helvetica';
   font-weight: 500;
-}*/
+}
 
 .btn-go{
    background-color: #2C3333; 
@@ -94,7 +94,8 @@
    margin:9px 0;
 }
 .main-menu a>img {
-   padding:20px;
+  padding: 10px; 
+  width: 100%;
 }
 .main-menu li {
    position:relative;
@@ -188,8 +189,13 @@ li.active-sidebar>a{
 }
 
 .area .header{
-   margin-left: 80px;
-   font-family: 'Helvetica';
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.area .header h1{
+  font-family: 'Helvetica';
+  font-weight: 600;
 }
 
 @font-face {
@@ -200,10 +206,12 @@ li.active-sidebar>a{
 
 /* Breadcrumbs */
 .breadcrumb {
+  height: 30px;
   font-size: 12px;
   color: #899bbd;
   background-color: #2C3333;
   font-weight: 600;
+  padding: 5px;
   margin-left: -20px;
   box-shadow: 0px 0 5px black;
 }
@@ -213,6 +221,7 @@ li.active-sidebar>a{
   transition: 0.3s;
   font-family: 'Helvetica';
   font-size: 10px;
+  margin-left: 16px;
 }
 
 .breadcrumb a:hover {
@@ -309,10 +318,10 @@ li.active-sidebar>a{
    width: 200px;
    margin-top: -20px;
    margin-bottom: 20px;
-   border: 1px solid grey;
+   border: 1px solid #2C3333;
    border-radius: 20px;
    height: 35px;
-   background-color: grey;
+   background-color: #2C3333;
 }
 
 .btn-crud font{
@@ -336,6 +345,24 @@ li.active-sidebar>a{
 
 .btn-crud .description:hover{
    color: #395B64;
+}
+a.edt>i.fa{
+  color: #395B64;
+  padding: 5px;
+}
+
+a.edt>i.fa:hover{
+  color: #0d1f24;
+}
+
+a.del>i.fa{
+  color: #da0707;
+  padding: 5px;
+}
+
+a.del>i.fa:hover{
+  color: #a50505;
+  padding: 5px;
 }
 
 .container-fluidd{
