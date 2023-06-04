@@ -795,3 +795,43 @@ section a{
 .modal-dialog .modal-body .form input[type=button]:hover {
   background-color: #2D3434;
 }
+
+/* Edit data */
+.card-body .form input[type=text], input[type=url], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.card-body .form button {
+  width:40%;
+  float: left;
+  background-color: #3A5C65;
+  color: white;
+  padding: 14px 20px;
+  margin-bottom: -20px;
+  margin-top: 10px;
+  margin-left: 100px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-body .form button.btn-edit{
+  font-size: 18px;
+  font-family: 'Helvetica';
+}
+
+.card-body .form button.btn-back{
+  background-color: rgb(179, 21, 21);
+  margin-left: 20px;
+}
+
+.card-body .form button:hover {
+  background-color: #2D3434;
+}

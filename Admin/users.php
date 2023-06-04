@@ -61,14 +61,14 @@
                      <tbody>
                         <tr>
                            <td scope="row">1</th>
-                           <td>BrandonJacob</td>
+                           <td>Brandon Jacob</td>
                            <td>Brandon Jacob</td>
                            <td>S1 Sistem Informasi</td>
                            <td>M</td>
                            <td>Institut Teknologi Telkom Purwokerto</td>
                            <td>Mahasiswa</td>
                         <td>
-                           <a href="" class="edt"><i class="fa fa-pencil-square-o"></i></a>
+                           <a href="edit-users.php" class="edt"><i class="fa fa-pencil-square-o"></i></a>
                            <a href="" class="del" onclick="return confirm('Anda yakin ingin Hapus?')"><i class="fa fa-trash-o"></i></a>
                         </td>
                         </tr>

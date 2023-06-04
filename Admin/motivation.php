@@ -60,7 +60,7 @@
                     <td>Brandon Jacob</td>
                     <td>S1 Sistem Informasi</td>
                     <td>
-                        <a href="" class="edt"><i class="fa fa-pencil-square-o"></i></a>
+                        <a href="edit-motivation.php" class="edt"><i class="fa fa-pencil-square-o"></i></a>
                         <a href="" class="del" onclick="return confirm('Anda yakin ingin Hapus?')"><i class="fa fa-trash-o"></i></a>
                      </td>
                   </tr>
