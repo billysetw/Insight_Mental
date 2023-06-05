@@ -40,7 +40,7 @@
 	            <ul class="nav navbar-nav">
 	                <li class="active-nav"><a href="home.php"><img src="../assets/img/icon/icon-home.png"><p>Home</p></a></li>
 	                <li><a href="chat.php"><img src="../assets/img/icon/icon-chatting.png"><p>Chat</p></a></li>
-	                <li><a href="#"><img src="../assets/img/icon/icon-account.png"><p>Profil</p></a></li>
+	                <li><a href="profile.php"><img src="../assets/img/icon/icon-account.png"><p>Profil</p></a></li>
 	               	<li class="logout"><a href="#" onclick="return confirm('Apakah anda yakin ingin keluar ?')"><img src="../assets/img/icon/icon-logout.png"><p>Logout</p></a></li>
 	            </ul>
 	        </div>
@@ -49,51 +49,45 @@
 
 	<!-- Content -->
 	<div class="containerr">
-		<h1>Hai, <b>Psikolog</b></h1>
-	    <h4>Selamat Datang di Website Insight Mental!</h4>
-	    <hr>
-	    <div class="sub-header">
-	        <b>Information</b>
-	    </div>
-	    <hr>
-	     <main>
-    <section class="news-section">
-      <div class="news-container">
-      	<a href="">
-          <div class="news-item">
-            <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
-            <hr><h3 class="news-title">News Title</h3><hr>
-            <p class="news-date">May 18, 2023</p>
-            <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </a>
-      	<a href="">
-          <div class="news-item">
-            <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
-            <hr><h3 class="news-title">News Title</h3><hr>
-            <p class="news-date">May 18, 2023</p>
-            <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </a>
-        <a href="">
-          <div class="news-item">
-            <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
-            <hr><h3 class="news-title">News Title</h3><hr>
-            <p class="news-date">May 18, 2023</p>
-            <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </a>
-        <a href="">
-          <div class="news-item">
-            <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
-            <hr><h3 class="news-title">News Title</h3><hr>
-            <p class="news-date">May 18, 2023</p>
-            <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </a>
-      </div>
-    </section>
-  </main>
+    <div class="card">
+      <h1>Hai, <b>Psikolog</b></h1>
+        <h4>Selamat Datang di Website Insight Mental!</h4>
+        <hr>
+        <div class="sub-header">
+            <b>Information</b>
+        </div>
+        <hr>
+        <main>
+      <section class="news-section">
+        <div class="news-container">
+          <a href="">
+            <div class="news-item">
+              <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
+              <hr><h3 class="news-title">News Title</h3><hr>
+              <p class="news-date">May 18, 2023</p>
+              <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="news-item">
+              <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
+              <hr><h3 class="news-title">News Title</h3><hr>
+              <p class="news-date">May 18, 2023</p>
+              <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="news-item">
+              <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
+              <hr><h3 class="news-title">News Title</h3><hr>
+              <p class="news-date">May 18, 2023</p>
+              <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    </div>
 	</div>
 </body>
 </html>

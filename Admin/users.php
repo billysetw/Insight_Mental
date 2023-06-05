@@ -75,12 +75,22 @@
                      </tbody>
                   </table>
                   </div>
+                  <div class="pagination">
+                     <a href="#">&laquo;</a>
+                     <a href="#">1</a>
+                     <a href="#" class="active">2</a>
+                     <a href="#">3</a>
+                     <a href="#">4</a>
+                     <a href="#">5</a>
+                     <a href="#">6</a>
+                     <a href="#">&raquo;</a>
+                  </div>
                </div>
             </div>
          </div>
          <!-- Add -->
          <div class="modal fade" id="add" aria-labelledby="addUser">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-scrollable">
                <div class="modal-content">
                   <div class="modal-header">
                      <h1 class="modal-title fs-5" id="addUser">TAMBAH USERS</h1>
@@ -202,7 +212,7 @@
 
       <ul class="logout">
          <li>
-            <a href="logout.php">
+            <a href="logout.php" onclick="return confirm('Apakah yakin ingin keluar?')">
                <i class="fa fa-power-off fa-2x"></i>
                <span class="nav-text">
                   <b>Logout</b>
