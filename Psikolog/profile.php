@@ -34,14 +34,14 @@
 
 </head>
 
-<body>
+<body style="background: #A5C9CA">
 	<!-- Content -->
-	<div class="containerr">
+	<div class="container-profile">
 		<section class="section profile">
 			<div class="row">
 				<div class="col-xl-4">
 					<div class="card">
-						<h2><a href="home.php"><i class="fa fa-chevron-left"></i></a>Profile</h2>
+						<h2><a href="home.php" style=”text-decoration:none;” alt="Back"><i class="fa fa-chevron-left"></i></a>Profile</h2>
 						<div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 							<img src="../assets/img/games.jpeg" alt="Profile" class="rounded-circle">
 							<h2>Kevin Anderson</h2>
@@ -121,23 +121,6 @@
 
 									<!-- Profile Edit Form -->
 									<form>
-										<div class="row mb-3">
-											<label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile
-												Image</label>
-											<div class="col-md-8 col-lg-9">
-												<img src="../assets/img/games.jpeg" alt="Profile">
-												<div class="pt-2">
-													<a href="#" class="btn btn-primary btn-sm"
-														title="Upload new profile image"><i
-															class="fa fa-upload"></i></a>
-													<a href="#" class="btn btn-danger btn-sm"
-														title="Remove my profile image"
-														onclick="return confirm('Hapus Foto Profil?')"><i
-															class="fa fa-trash"></i></a>
-												</div>
-											</div>
-										</div>
-
 										<div class="row mb-3">
 											<label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full
 												Name</label>

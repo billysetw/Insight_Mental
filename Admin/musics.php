@@ -95,7 +95,13 @@
                   <div class="modal-body">
                      <form action="" method="POST" class="form">
                         <label>Category <span style="color: red;">*</span></label>
-                        <input type="text" id="category" name="category" placeholder="Silahkan masukkan category..." required>
+                        <select id="category" name="category" required>
+                           <option value="">Silahkan Pilih</option>
+                           <option value="Jazz">Jazz</option>
+                           <option value="Rock">Rock</option>
+                           <option value="Hip hop / Rap / Rapcore">Hip hop / Rap / Rapcore</option>
+                           <option value="Pop">Pop</option>
+                        </select>
 
                         <label>Title <span style="color: red;">*</span></label>
                         <input type="text" id="title" name="title" placeholder="Silahkan masukkan title..." required>

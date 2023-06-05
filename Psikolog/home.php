@@ -54,14 +54,15 @@
         <h4>Selamat Datang di Website Insight Mental!</h4>
         <hr>
         <div class="sub-header">
-            <b>Information</b>
+            <h3><b>Information</b></h3>
+            <h4><b>Top 4 News Information</b></h4>
         </div>
         <hr>
         <main>
       <section class="news-section">
         <div class="news-container">
           <a href="">
-            <div class="news-item">
+            <div class="news-item satu">
               <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
               <hr><h3 class="news-title">News Title</h3><hr>
               <p class="news-date">May 18, 2023</p>
@@ -69,7 +70,7 @@
             </div>
           </a>
           <a href="">
-            <div class="news-item">
+            <div class="news-item kedua">
               <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
               <hr><h3 class="news-title">News Title</h3><hr>
               <p class="news-date">May 18, 2023</p>
@@ -77,7 +78,15 @@
             </div>
           </a>
           <a href="">
-            <div class="news-item">
+            <div class="news-item ketiga">
+              <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
+              <hr><h3 class="news-title">News Title</h3><hr>
+              <p class="news-date">May 18, 2023</p>
+              <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="news-item keempat">
               <img src="../assets/img/games.jpeg" alt="News Image" class="news-image">
               <hr><h3 class="news-title">News Title</h3><hr>
               <p class="news-date">May 18, 2023</p>
