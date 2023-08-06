@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
    <meta charset="utf-8">
    <title>Dashboard</title>
@@ -15,7 +16,8 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
    <!-- bootstrap icon & font awasome -->
-   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+      rel="stylesheet">
    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
    <!-- MDB icon -->
@@ -24,6 +26,7 @@
    <!-- css -->
    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>
+
 <body>
    <!-- Main Content -->
    <div class="area">
@@ -31,109 +34,121 @@
       <div class="header">
          <h1>Dashboard</h1>
          <nav>
-           <ol class="breadcrumb">
-             <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-             <li class="breadcrumb-item active">Dashboard</li>
-           </ol>
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
+               <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
          </nav>
-       </div>
-       <!-- Fitur -->
-       <div class="cards">
+      </div>
+      <!-- Fitur -->
+      <div class="cards">
          <div class="col">
             <div class="card text-center">
                <div class="card-body">
-                 <h5 class="card-title">Users</h5>
-                 <p class="card-text">untuk mengelola data data pada pengguna aplikasi Insight Mental ini.</p>
-                 <button type="button" class="btn-go">
-                  <a href="users.php"> Go >> </a>
-                 </button>
+                  <h5 class="card-title">Users</h5>
+                  <p class="card-text">untuk mengelola data data pada pengguna aplikasi Insight Mental ini.</p>
+                  <button type="button" class="btn-go">
+                     <a href="users.php"> Go >> </a>
+                  </button>
                </div>
-             </div>
+            </div>
          </div>
          <div class="col">
             <div class="card text-center">
                <div class="card-body">
-                 <h5 class="card-title">Information</h5>
-                 <p class="card-text">untuk mengelola informasi seputar Kesehatan Mental dari sumber yang dipilih.</p>
-                 <button type="button" class="btn-go">
-                  <a href="information.php"> Go >></a>
-                 </button>
+                  <h5 class="card-title">Information</h5>
+                  <p class="card-text">untuk mengelola informasi seputar Kesehatan Mental dari sumber yang dipilih.</p>
+                  <button type="button" class="btn-go">
+                     <a href="information.php"> Go >></a>
+                  </button>
                </div>
-             </div>
+            </div>
          </div>
          <div class="col">
             <div class="card text-center">
                <div class="card-body">
-                 <h5 class="card-title">Musics</h5>
-                 <p class="card-text">untuk mengelola data musik untuk direkomendasikan kepada pengguna.</p>
-                 <button type="button" class="btn-go">
-                  <a href="musics.php"> Go >></a>
-                 </button>
+                  <h5 class="card-title">Musics</h5>
+                  <p class="card-text">untuk mengelola data musik untuk direkomendasikan kepada pengguna.</p>
+                  <button type="button" class="btn-go">
+                     <a href="musics.php"> Go >></a>
+                  </button>
                </div>
-             </div>
+            </div>
          </div>
          <div class="col">
             <div class="card text-center">
                <div class="card-body">
-                 <h5 class="card-title">Motivation Word</h5>
-                 <p class="card-text">untuk mengelola kata-kata motivasi yang akan diberikan pada pengguna.</p>
-                 <button type="button" class="btn-go">
-                  <a href="motivation.php"> Go >></a>
-                 </button>
+                  <h5 class="card-title">Motivation Word</h5>
+                  <p class="card-text">untuk mengelola kata-kata motivasi yang akan diberikan pada pengguna.</p>
+                  <button type="button" class="btn-go">
+                     <a href="motivation.php"> Go >></a>
+                  </button>
                </div>
-             </div>
+            </div>
          </div>
          <div class="col">
             <div class="card text-center">
                <div class="card-body">
-                 <h5 class="card-title">FAQ</h5>
-                 <p class="card-text">untuk mengelola pertanyaan umum yang dapat ditampilkan kepada pengguna.</p>
-                 <button type="button" class="btn-go">
-                  <a href="faq.php"> Go >></a>
-                 </button>
+                  <h5 class="card-title">FAQ</h5>
+                  <p class="card-text">untuk mengelola pertanyaan umum yang dapat ditampilkan kepada pengguna.</p>
+                  <button type="button" class="btn-go">
+                     <a href="faq.php"> Go >></a>
+                  </button>
                </div>
-             </div>
+            </div>
          </div>
       </div>
       <!-- Chart -->
       <div class="cards">
          <h5 class="card-header">Chart</h5>
-         <canvas id="myChart" aria-label="chart" height="200" width="580"></canvas>
+         <canvas id="myChart" aria-label="chart"></canvas>
       </div>
       <script>
-         var xValues = ["D3 Digital Technology", "D3 Teknik Telekomunikasi","S1 Teknik Telekomunikasi","S1 Teknik Biomedis", "S1 Teknik Informatika", "S1 Software Engineering", "S1 Sistem Informasi", "S1 Sains Data", "S1 Teknik Industri", "S1 Desain Komunikasi Visual", "S1 Digital Logistics", "S1 Bisnis Digital", "S1 Elektro"];
-         var yValues = [55, 49, 44, 24, 15, 55, 49, 44, 24, 15, 55, 49, 44];
-         var barColors = [
-            "#FFF2CC",
-            "#FFD966",
-            "#F4B183",
-            "#DFA67B",
-            "#DDFFBB",
-            "#F7C8E0",
-            "#DFFFD8",
-            "#B4E4FF",
-            "#95BDFF",
-            "#6096B4",
-            "#93BFCF",
-            "#BDCDD6",
-            "#EEE9DA",
-         ];
-
-         new Chart("myChart", {
-         type: "doughnut",
-         data: {
-            labels: xValues,
-            datasets: [{
-               backgroundColor: barColors,
-               data: yValues
-            }]
-         },
-         options: {
-            title: {
-               display: true,
-               text: "Pengguna Aplikasi Insight Mental sesuai Program Studi"
+         async function fetchData() {
+            try {
+               const response = await fetch('http://localhost:3000/chart/prodi');
+               const data = await response.json();
+               return data;
+            } catch (error) {
+               console.error('Error fetching data:', error);
+               return null;
             }
          }
+
+         function createChart(prodi, totalPengguna) {
+            const ctx = document.getElementById('myChart').getContext('2d');
+            new Chart(ctx, {
+               type: 'doughnut',
+               data: {
+                  labels: prodi,
+                  datasets: [{
+                     backgroundColor: getRandomColors(prodi.length),
+                     data: totalPengguna
+                  }]
+               },
+               options: {
+                  title: {
+                     display: true,
+                     text: 'Pengguna Aplikasi Insight Mental sesuai Program Studi'
+                  }
+               }
+            });
+         }
+
+         function getRandomColors(count) {
+            const colors = [];
+            for (let i = 0; i < count; i++) {
+               const color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+               colors.push(color);
+            }
+            return colors;
+         }
+
+         document.addEventListener('DOMContentLoaded', async () => {
+            const data = await fetchData();
+            if (data) {
+               createChart(data.prodi, data.totalPengguna);
+            }
          });
       </script>
    </div>
@@ -195,15 +210,48 @@
 
       <ul class="logout">
          <li>
-            <a href="logout.php">
+            <a href="#" onclick="logout()">
                <i class="fa fa-power-off fa-2x"></i>
                <span class="nav-text">
                   <b>Logout</b>
                </span>
             </a>
-         </li>  
+         </li>
       </ul>
    </nav>
-</body>
-</html>
+   <script>
+      // Fungsi untuk melakukan logout
+      async function logout() {
+         // Tampilkan konfirmasi "Apakah Anda yakin ingin keluar?"
+         const isConfirmed = window.confirm('Apakah Anda yakin ingin keluar?');
 
+         if (isConfirmed) {
+            try {
+               // Panggil endpoint logout di backend menggunakan fetch
+               const response = await fetch('http://localhost:3000/logout', {
+                  method: 'GET', // Karena di server, endpoint /logout menggunakan GET method
+                  credentials: 'include', // Sertakan opsi ini agar cookie disertakan dalam permintaan
+               });
+
+               if (response.ok) {
+                  // Jika logout berhasil, hapus cookie yang menyimpan token akses
+                  document.cookie = 'accessToken=; max-age=0; path=/; secure; samesite=strict;';
+
+                  // Redirect pengguna ke halaman login setelah logout
+                  window.location.replace('../index.php');
+                  window.history.pushState({}, '', '../index.php');
+               } else {
+                  // Jika logout gagal, tampilkan pesan kesalahan
+                  console.error('Logout failed:', response);
+                  alert('Logout gagal. Silakan coba lagi.');
+               }
+            } catch (error) {
+               console.error('Error during logout:', error);
+               alert('Terjadi kesalahan saat logout. Silakan coba lagi.');
+            }
+         }
+      }
+   </script>
+</body>
+
+</html>

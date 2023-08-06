@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
    <meta charset="utf-8">
    <title>Information</title>
 
-   <!-- boostrap --> 
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-   <!-- Boostrap Modal -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-   
    <!-- icon -->
-   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
    <link rel="icon" href="../assets/img/logo-admin.png" type="image/x-icon" />
 
+   <!-- boostrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
    <!-- CSS -->
-   <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+   <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   <!-- Boostrap Bundle -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+
 </head>
+
 <body>
    <!-- Main Content -->
    <div class="area">
@@ -25,98 +33,96 @@
       <div class="header">
          <h1>Mengelola Information</h1>
          <nav>
-           <ol class="breadcrumb">
-             <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-             <li class="breadcrumb-item active">Information</li>
-           </ol>
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
+               <li class="breadcrumb-item active">Information</li>
+            </ol>
          </nav>
-       </div>
-      <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="card">
-            <div class="card-body">
-            <h5 class="card-title"><b>Information</b> Insight Mental</h5>
-
-               <!-- PopUp -->
-               <button type="button" class="btn-crud btn-primary" data-bs-toggle="modal" data-bs-target="#add">
-                  <i class="fa fa-plus-circle"></i><font>Tambah Information</font>
-               </button>
-
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Web Url</th>
-                    <th scope="col">Posted by</th>
-                    <th scope="col">Topic</th>
-                    <th scope="col">Background Image</th>
-                    <th scope="col">Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                     <td scope="row">1</th>
-                     <td>BrandonJacob</td>
-                     <td>Brandon Jacob</td>
-                     <td>S1 Sistem Informasi</td>
-                     <td>M</td>
-                     <td>Institut Teknologi Telkom Purwokerto</td>
-                     <td>
-                        <a href="edit-information.php" class="edt"><i class="fa fa-pencil-square-o"></i></a>
-                        <a href="" class="del" onclick="return confirm('Anda yakin ingin Hapus?')"><i class="fa fa-trash-o"></i></a>
-                     </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="pagination">
-               <a href="#">&laquo;</a>
-               <a href="#">1</a>
-               <a href="#" class="active">2</a>
-               <a href="#">3</a>
-               <a href="#">4</a>
-               <a href="#">5</a>
-               <a href="#">6</a>
-               <a href="#">&raquo;</a>
-            </div>            
-          </div>
-        </div>
       </div>
-      <!-- Add -->
-      <div class="modal fade" id="add" aria-labelledby="addInfo">
-            <div class="modal-dialog modal-dialog-scrollable">
-               <div class="modal-content">
-                  <div class="modal-header">
-                     <h1 class="modal-title fs-5" id="addInfo">TAMBAH INFORMATION</h1>
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <section class="section">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="card">
+
+                  <div id="successMessage" style="display: none;">
+                     Data Information berhasil ditambahkan
                   </div>
-                  <div class="modal-body">
-                     <form action="" method="POST" class="form">
-                        <label>Title <span style="color: red;">*</span></label>
-                        <input type="text" id="title" name="title" placeholder="Silahkan masukkan title..." required>
 
-                        <label>Web Url <span style="color: red;">*</span></label>
-                        <input type="text" id="urlWeb" name="urlWeb" placeholder="Silahkan masukkan website url..." required>
-
-                        <label>Posted By <span style="color: red;">*</span></label>
-                        <input type="text" id="postedBy" name="postedBy" placeholder="Silahkan masukkan pembuat..." required>
-
-                        <label>Topic <span style="color: red;">*</span></label>
-                        <input type="text" id="topic" name="topic" placeholder="Diubah oleh..." required>
-
-                        <label>Background Image <span style="color: red;">*</span></label>
-                        <input type="file" id="bgImg" name="bgImg"  required>
-                     </form>
+                  <div id="deleteMessage" style="display: none;">
+                     Data Information berhasil dihapus
                   </div>
-                  <div class="modal-footer">
-                     <button type="button" class="btn btn-primary" name="submit">Add Data</button>
+                  <?php
+                  // Check if there is a success message in the URL
+                  if (isset($_GET['message']) && !empty($_GET['message'])) {
+                     $message = $_GET['message'];
+                     echo '<div id="updateMessage">' . $message . '</div>';
+                     // Tambahkan kode JavaScript untuk menyembunyikan pesan setelah 3 detik
+                     echo '<script>
+                              setTimeout(() => {
+                                 document.getElementById("updateMessage").style.display = "none";
+                              }, 3000);
+                           </script>';
+                  }
+                  ?>
+
+                  <div class="card-body">
+                     <h5 class="card-title"><b>Information</b> Insight Mental</h5>
+
+                     <!-- PopUp -->
+                     <button type="button" class="btn-crud btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#addInformation">
+                        <i class="fa fa-plus-circle"></i>
+                        <font>Tambah Information</font>
+                     </button>
+
+                     <table class="table datatable">
+                        <thead>
+                           <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">Title</th>
+                              <th scope="col">Web Url</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Aksi</th>
+                           </tr>
+                        </thead>
+                        <tbody id="informationList"></tbody>
+                     </table>
+                     <div class="pagination" id="paginationPage"></div>
                   </div>
                </div>
             </div>
          </div>
-    </section>
+         <!-- Add -->
+         <div class="modal fade" id="addInformation" aria-labelledby="addInfo" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+               <!-- Modal content -->
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <div id="errorMessage" class="warning"></div>
+                     <h1 class="modal-title fs-5" id="addInfo">TAMBAH INFORMATION</h1>
+                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                     <form action="" method="POST" class="form" id="addinformationForm">
+                        <label>Title <span style="color: red;">*</span></label>
+                        <input type="text" id="title" name="title" placeholder="Silahkan masukkan title..." required>
+
+                        <label>Web Url <span style="color: red;">*</span></label>
+                        <input type="text" id="weburl" name="weburl" placeholder="Silahkan masukkan website url..."
+                           required>
+
+                        <label>Description <span style="color: red;">*</span></label>
+                        <textarea type="text" id="desc" name="desc" placeholder="Silahkan masukkan desc..."
+                           required></textarea>
+                     </form>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-primary" name="submit" id="addDataButton">Add Data</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
    </div>
    <!-- Navbar Content -->
    <nav class="main-menu">
@@ -176,15 +182,277 @@
 
       <ul class="logout">
          <li>
-            <a href="logout.php" onclick="return confirm('Apakah yakin ingin keluar?')">
+            <a href="#" onclick="logout()">
                <i class="fa fa-power-off fa-2x"></i>
                <span class="nav-text">
                   <b>Logout</b>
                </span>
             </a>
-         </li>  
+         </li>
       </ul>
    </nav>
-</body>
-</html>
+   <script>
+      // Event listener untuk tombol "Add Data"
+      document.getElementById('addDataButton').addEventListener('click', handleAddinformationFormSubmit);
 
+      let currentPage = 1;
+      let pageSize = 30;
+      let totalPages;
+
+      document.addEventListener('DOMContentLoaded', () => {
+         getinformation();
+      });
+
+      async function getinformation() {
+         try {
+            const response = await fetch('http://localhost:3000/information/viewInformation');
+            const data = await response.json();
+
+            // Hitung indeks data awal dan akhir untuk halaman saat ini
+            const startIndex = (currentPage - 1) * pageSize;
+            const endIndex = Math.min(startIndex + pageSize, data.data.length);
+
+            const informationToDisplay = data.data.slice(startIndex, endIndex);
+
+            const informationListTable = document.getElementById('informationList');
+            informationListTable.innerHTML = '';
+
+            let index = startIndex + 1;
+
+            if (data.data.length === 0) {
+               const noDataRow = document.createElement('tr');
+               noDataRow.innerHTML = '<td colspan="6">Tidak ada data</td>';
+               informationListTable.appendChild(noDataRow);
+            } else {
+               informationToDisplay.forEach(information => {
+                  const informationRow = document.createElement('tr');
+                  informationRow.innerHTML = `
+    <td>${index}</td>
+    <td>${information.title}</td>
+    <td>${information.weburl}</td>
+    <td>${information.desc}</td>
+    <td>
+      <a href="edit-information.php?id=${information.id}" class="edt"><i class="fa fa-pencil-square-o"></i></a>
+
+      <a href="#" class="del" onclick="return deleteinformation(${information.id})"><i class="fa fa-trash-o"></i></a>
+    </td>
+  `;
+                  informationListTable.appendChild(informationRow);
+                  index++;
+               });
+            }
+
+            totalPages = data.totalPages;
+
+            console.log('totalPages:', totalPages);
+
+            updatePagination(currentPage, totalPages);
+         } catch (error) {
+            console.error('Error fetching information:', error);
+         }
+      }
+
+      function updatePage(pageNumber) {
+         currentPage = pageNumber;
+         getinformation();
+      }
+
+      function updatePagination(currentPage, totalPages) {
+         const paginationDiv = document.getElementById('paginationPage');
+         paginationDiv.innerHTML = '';
+
+         console.log('Current page:', currentPage);
+
+         // Tambahkan tombol Previous jika tidak berada di halaman pertama
+         const prevButton = document.createElement('button');
+         prevButton.textContent = '«';
+         prevButton.addEventListener('click', () => {
+            updatePage(currentPage - 1);
+         });
+         paginationDiv.appendChild(prevButton);
+
+         // Tambahkan tombol nomor halaman
+         for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.textContent = i;
+            (function (pageNumber) {
+               // Gunakan IIFE untuk membuat scope baru dan menyimpan nilai pageNumber
+               pageButton.addEventListener('click', () => {
+                  updatePage(pageNumber); // Panggil fungsi untuk memperbarui halaman
+               });
+            })(i);
+            paginationDiv.appendChild(pageButton);
+
+            // Tandai halaman saat ini sebagai aktif
+            if (i === currentPage) {
+               pageButton.classList.add('active');
+            }
+         }
+
+         // Tambahkan tombol Next
+         const nextButton = document.createElement('button');
+         nextButton.textContent = '»';
+         nextButton.addEventListener('click', () => {
+            updatePage(currentPage + 1);
+         });
+         paginationDiv.appendChild(nextButton);
+      }
+
+      // Add Data
+      async function handleAddinformationFormSubmit() {
+         const form = document.getElementById('addinformationForm');
+         const formData = new FormData(form);
+         const { title, weburl, desc, bgImage } = Object.fromEntries(formData.entries());
+
+         try {
+
+            const response = await fetch('http://localhost:3000/information/addData', {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json',
+               },
+               body: JSON.stringify({ title:title, weburl:weburl, desc:desc}),
+            });
+
+            if (!response.ok) {
+               const responseData = await response.json();
+               const errorMessageDiv = document.getElementById('errorMessage');
+               errorMessageDiv.textContent = responseData.message;
+               errorMessageDiv.style.display = 'block';
+
+               // Hilangkan pesan kesalahan setelah 3 detik (3000 ms)
+               setTimeout(() => {
+                  errorMessageDiv.style.display = 'none';
+               }, 5000);
+
+               return;
+            }
+
+            // Reset form setelah berhasil menambahkan pengguna
+            form.reset();
+            // Tutup modal setelah berhasil menambahkan pengguna
+            $('#addInformation').modal('hide');
+
+            // Tampilkan pesan sukses atau lakukan tindakan lain jika diperlukan
+            console.log('information added successfully.');
+
+            // Tampilkan pesan sukses
+            const successMessageDiv = document.getElementById('successMessage');
+            successMessageDiv.style.display = 'block';
+
+            // Sembunyikan pesan sukses setelah 3 detik (3000 ms)
+            setTimeout(() => {
+               successMessageDiv.style.display = 'none';
+            }, 5000);
+
+            // Muat ulang data pengguna setelah berhasil menambahkan pengguna
+            getinformation();
+         } catch (error) {
+            console.error('Error adding information:', error);
+            // Tampilkan pesan kesalahan jika diperlukan
+         }
+      }
+
+      function buildinformationTable(information) {
+         const informationListTable = document.getElementById('informationList');
+         informationListTable.innerHTML = ''; // Kosongkan tabel sebelum membangun ulang
+
+         let index = 1;
+
+         if (!information || information.length === 0) {
+            const noDataRow = document.createElement('tr');
+            noDataRow.innerHTML = '<td colspan="5">Tidak ada data</td>';
+            informationListTable.appendChild(noDataRow);
+         } else {
+            information.forEach(information => {
+               const informationRow = document.createElement('tr');
+               informationRow.innerHTML = `
+               <td>${index}</td>
+    <td>${information.title}</td>
+    <td>${information.weburl}</td>
+    <td>${information.desc}</td>
+    <td>
+      <a href="edit-information.php?id=${information.id}" class="edt"><i class="fa fa-pencil-square-o"></i></a>
+
+      <a href="#" class="del" onclick="return deleteinformation(${information.id})"><i class="fa fa-trash-o"></i></a>
+    </td>
+  `;
+               informationListTable.appendChild(informationRow);
+               index++;
+            });
+         }
+      }
+
+
+      // Fungsi untuk menghapus pengguna berdasarkan ID
+      async function deleteinformation(informationId) {
+         // Tampilkan dialog konfirmasi
+         const isConfirmed = window.confirm('Apakah Anda yakin ingin menghapus pengguna?');
+         if (!isConfirmed) {
+            return; // Jika pengguna membatalkan, hentikan proses penghapusan
+         }
+
+         try {
+            const response = await fetch(`http://localhost:3000/information/delete/${informationId}`, {
+               method: 'DELETE',
+            });
+            if (response.ok) {
+               console.log('Pengguna dengan ID', informationId, 'telah dihapus.');
+               // Ambil data pengguna terbaru dari server setelah pengguna dihapus
+               const updatedinformationResponse = await fetch('http://localhost:3000/information/viewInformation');
+               const updatedData = await updatedinformationResponse.json();
+               const updatedinformation = updatedData.data;
+               // Tampilkan pesan sukses
+               const deleteMessageDiv = document.getElementById('deleteMessage');
+               deleteMessageDiv.style.display = 'block';
+
+               // Sembunyikan pesan sukses setelah 3 detik (3000 ms)
+               setTimeout(() => {
+                  deleteMessageDiv.style.display = 'none';
+               }, 5000);
+
+               buildinformationTable(updatedinformation); // Panggil kembali fungsi buildinformationTable dengan data pengguna terbaru
+            } else {
+               console.error('Gagal menghapus pengguna dengan ID', informationId);
+            }
+         } catch (error) {
+            console.error('Error deleting information:', error);
+         }
+         return false; // Mengembalikan false untuk mencegah tindakan default tautan
+      }
+
+      // Fungsi untuk melakukan logout
+      async function logout() {
+         // Tampilkan konfirmasi "Apakah Anda yakin ingin keluar?"
+         const isConfirmed = window.confirm('Apakah Anda yakin ingin keluar?');
+
+         if (isConfirmed) {
+            try {
+               // Panggil endpoint logout di backend menggunakan fetch
+               const response = await fetch('http://localhost:3000/logout', {
+                  method: 'GET', // Karena di server, endpoint /logout menggunakan GET method
+                  credentials: 'include', // Sertakan opsi ini agar cookie disertakan dalam permintaan
+               });
+
+               if (response.ok) {
+                  // Jika logout berhasil, hapus cookie yang menyimpan token akses
+                  document.cookie = 'accessToken=; max-age=0; path=/; secure; samesite=strict;';
+
+                  // Redirect pengguna ke halaman login setelah logout
+                  window.location.replace('../index.php');
+                  window.history.pushState({}, '', '../index.php');
+               } else {
+                  // Jika logout gagal, tampilkan pesan kesalahan
+                  console.error('Logout failed:', response);
+                  alert('Logout gagal. Silakan coba lagi.');
+               }
+            } catch (error) {
+               console.error('Error during logout:', error);
+               alert('Terjadi kesalahan saat logout. Silakan coba lagi.');
+            }
+         }
+      }
+   </script>
+</body>
+
+</html>

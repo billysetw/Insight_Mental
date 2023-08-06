@@ -312,6 +312,7 @@ li.active-sidebar>a{
 
 .area .section .table tbody td{
    text-align: center;
+   word-break: break-word;
 }
 
 /* btn */
@@ -453,7 +454,7 @@ section.news-section a{
   grid-gap: 20px;
 }
 
-.news-item.satu {
+.news-item {
   background: #E7F6F2;
   border-radius: 25px;
   box-shadow: 5px 5px 10px grey;
@@ -461,56 +462,12 @@ section.news-section a{
   color: #2C3333;
 }
 
-.news-item.satu:hover {
+.news-item:hover {
   background: #aebdb9;
 }
 
-.news-item.kedua {
-  background: #A5C9CA;
-  border-radius: 25px;
-  box-shadow: 5px 5px 10px grey;
-  padding: 20px;
-  color: #2C3333;
-}
-
-.news-item.kedua:hover {
-  background: #87a4a5;
-}
-
-.news-item.ketiga {
-  background: #395B64;
-  border-radius: 25px;
-  box-shadow: 5px 5px 10px grey;
-  padding: 20px;
-  color: #E7F6F2;
-}
-
-.news-item.ketiga:hover {
-  background: #4a727e;
-}
-
-.news-item.keempat {
-  background: #2C3333;
-  border-radius: 25px;
-  box-shadow: 5px 5px 10px grey;
-  padding: 20px;
-  color: #E7F6F2;
-}
-
-.news-item.keempat:hover {
-  background: #576363;
-}
-
-.news-image {
-  max-width: 100%;
-  height: auto;
-  border: 1px grey;
-  border-radius: 25px;
-  margin-bottom: 10px;
-}
-
 .news-title {
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   margin-bottom: 10px;
   font-weight: bold;
@@ -520,11 +477,11 @@ section.news-section a{
 .news-date {
   font-size: 14px;
   color: #acaaaa;
-  margin-bottom: 10px;
+  margin:(134, 134, 134) 10px;
 }
 
 .news-content {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   word-wrap: break-word;
 }
@@ -535,7 +492,7 @@ section.news-section a{
   font-weight: bold;
 }
 
-.modal-dialog .modal-body .form input[type=text], input[type=url], select {
+.modal-dialog .modal-body .form input[type=text], input[type=email], input[type=url], textarea, select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -563,7 +520,7 @@ section.news-section a{
 }
 
 /* Edit data */
-.card-body .form input[type=text], input[type=url], select {
+.card-body .form input[type=text],textarea, input[type=url], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -593,9 +550,18 @@ section.news-section a{
   font-family: 'Helvetica';
 }
 
-.card-body .form button.btn-back{
+.card-body .form a.btn-back{
   background-color: rgb(179, 21, 21);
   margin-left: 20px;
+  width:40%;
+  float: left;
+  color: white;
+  padding: 14px 20px;
+  margin-bottom: -20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .card-body .form button:hover {
@@ -603,29 +569,31 @@ section.news-section a{
 }
 
 /* Pagination */
-.pagination {
-  display: inline-block;
-  margin-left: 55vh;
+div.card-body div.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.pagination a {
+div.pagination>button {
   color: black;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
   transition: background-color .3s;
+  background-color: white;
   border: 1px solid #ddd;
   border-radius: 15px;
   margin: 0 4px;
 }
 
-.pagination a.active {
+div.pagination>button.active {
   background-color: #2D3434;
   color: white;
   border: 1px solid #2D3434;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination>button:hover:not(.active) {background-color: #ddd;}
 
 /*--------------------------------------------------------------
 # Profie Page
@@ -721,23 +689,34 @@ ul.nav.nav-tabs.nav-tabs-bordered li.nav-item button.nav-link.active{
 .chat-container {
   margin: 0 auto;
   width: 100%;
-  background: #444753;
+  background: #395B64;
   border-radius: 0;
   display: flex;
+  flex-direction: row; /* Menambahkan flex direction */
 }
 
 .people-list {
   width: 300px;
+  flex-shrink: 0; /* Mencegah perubahan lebar */
+  height: 100%; /* Isi tinggi 100% untuk mengisi tinggi kontainer */
+  overflow-y: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
-.people-list .search {
+
+.people-list .name {
+  color: #e7e7e7;
   padding: 20px;
+  border: 3px solid #ccc; /* Tambahkan garis dengan warna dan lebar yang diinginkan */
+  border-radius: 5px;
 }
+
 .people-list input {
   border-radius: 3px;
   border: none;
   padding: 14px;
-  
-  background: #6a6c75;
+  background: #ffffff;
   width: 90%;
   font-size: 14px;
 }
@@ -749,34 +728,36 @@ ul.nav.nav-tabs.nav-tabs-bordered li.nav-item button.nav-link.active{
   padding: 20px;
   height: 100%;
   max-height: 460px;
-  overflow-x: visible;
   overflow-y: auto;
-  color: white;
+  color: #bdbdbd;
 }
 .people-list ul li {
   padding-bottom: 20px;
   text-decoration: none;
 }
-.people-list img {
-  float: left;
-}
-.people-list .about {
-  float: left;
-  margin-top: 8px;
-}
-.people-list .about {
-  padding-left: 8px;
-}
-.people-list .status {
-  color: #92959e;
+
+.people-list ul,
+.people-list ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .chat {
-  width: calc(100% - 160px);
-  background: #f2f5f8;
-  color: #434651;
+  width: calc(100% - 300px); /* Menyesuaikan lebar chat */
+  background: #eeeded;
+  color: #2C3333;
   height: 100%;
+  flex-shrink: 0; /* Mencegah perubahan lebar */
 }
+
+.chat .chat-history ul,
+.chat .chat-history ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .chat .chat-header {
   padding: 20px;
   border-bottom: 2px solid white;
@@ -802,21 +783,25 @@ ul.nav.nav-tabs.nav-tabs-bordered li.nav-item button.nav-link.active{
   font-size: 20px;
   margin-top: 12px;
 }
+
 .chat .chat-history {
   padding: 30px 30px 20px;
   border-bottom: 2px solid white;
   overflow-y: auto;
   height: 350px;
 }
+
 .chat .chat-history .message-data {
   margin-bottom: 15px;
 }
+
 .chat .chat-history .message-data-time {
   color: #a8aab1;
   padding-left: 6px;
 }
+
 .chat .chat-history .message {
-  color: white;
+  color: rgb(83, 83, 83);
   padding: 18px 20px;
   line-height: 26px;
   font-size: 16px;
@@ -825,6 +810,7 @@ ul.nav.nav-tabs.nav-tabs-bordered li.nav-item button.nav-link.active{
   width: 90%;
   position: relative;
 }
+
 .chat .chat-history .message:after {
   bottom: 100%;
   left: 7%;
@@ -834,18 +820,20 @@ ul.nav.nav-tabs.nav-tabs-bordered li.nav-item button.nav-link.active{
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-bottom-color: #86bb71;
+  border-bottom-color: #A5C9CA;
   border-width: 10px;
   margin-left: -10px;
 }
 .chat .chat-history .my-message {
-  background: #86bb71;
+  background: #A5C9CA;
 }
 .chat .chat-history .other-message {
-  background: #94c2ed;
+  background: #395B64;
+  color: whitesmoke;
 }
 .chat .chat-history .other-message:after {
-  border-bottom-color: #94c2ed;
+  border-bottom-color: #395B64;
+  color: whitesmoke;
   left: 93%;
 }
 .chat .chat-message {
@@ -868,16 +856,17 @@ ul.nav.nav-tabs.nav-tabs-bordered li.nav-item button.nav-link.active{
 }
 .chat .chat-message button {
   float: right;
-  color: #94c2ed;
+  color: #ffffff;
   font-size: 16px;
   text-transform: uppercase;
+  padding: 20dp;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  background: #f2f5f8;
+  background: #2C3333;
 }
 .chat .chat-message button:hover {
-  color: #75b1e8;
+  background-color: #2C3333;
 }
 
 .online,
@@ -887,16 +876,8 @@ ul.nav.nav-tabs.nav-tabs-bordered li.nav-item button.nav-link.active{
   font-size: 10px;
 }
 
-.online {
-  color: #86bb71;
-}
-
-.offline {
-  color: #e38968;
-}
-
 .me {
-  color: #94c2ed;
+  color: #00ff37;
 }
 
 .align-left {
@@ -918,4 +899,60 @@ ul.nav.nav-tabs.nav-tabs-bordered li.nav-item button.nav-link.active{
   content: " ";
   clear: both;
   height: 0;
+}
+
+/* Error Message */
+/* Perubahan warna dan gaya pesan kesalahan */
+.warning {
+  color: #4c92b3;
+  background-color: #e7f5f7;
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-position: 10px center;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  /* Sembunyikan pesan kesalahan secara default */
+  display: none;
+}
+
+#successMessage, #successMessageP {
+  color: #4cb362;
+  background-color: #c0f7b9;
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-position: 10px center;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+#updateMessage {
+  color: #4cb362;
+  background-color: #c0f7b9;
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-position: 10px center;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+#deleteMessage {
+  color: #fd6b6b;
+  background-color: #f7b9b9;
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-position: 10px center;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
 }
